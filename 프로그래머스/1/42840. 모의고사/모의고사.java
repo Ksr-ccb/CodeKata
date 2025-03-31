@@ -11,15 +11,15 @@ class Solution {
         int[] correctArr = new int[3];
         
         for(int i = 0; i<answers.length; i++){
-            if( answers[i] == first[i%first.length]){
+            if( answers[i] == first[i%5]){
                 correctArr[0] ++;
             }
             
-            if( answers[i] == second[i%second.length]){
+            if( answers[i] == second[i%8]){
                 correctArr[1] ++;
             }
             
-            if( answers[i] == third[i%third.length]){
+            if( answers[i] == third[i%10]){
                 correctArr[2] ++;
             }
             
