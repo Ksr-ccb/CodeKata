@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 class Solution {
     public String[] solution(String[] players, String[] callings) {
-        String[] answer = players;
+        String[] answer = players.clone();
         
         Map<String, Integer> map = new HashMap<>();
         for (int i = 0; i < players.length; i++) {
@@ -18,7 +18,7 @@ class Solution {
             map.put(answer[index-1], index);
             
             answer[index] = answer[index-1];
-            answer[index - 1] = calling;
+            answer[index-1] = calling;
         }
         
         return answer;
